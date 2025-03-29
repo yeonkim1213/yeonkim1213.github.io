@@ -63,7 +63,7 @@ export const experience = [
   {
     title: "Peer Advisor",
     place: "University of Utah Academic Advising Center",
-    duration: "Jul 2022 - Jul 2023",
+    duration: "Jul 2019 - Jun 2020",
     points: [
       "Answered incoming phone calls and emails and provided general academic information.",
       "Coordinated the planning and successful organization of multiple information sessions and events.",
