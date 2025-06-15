@@ -45,15 +45,6 @@ body {
   font-weight: 700;
   color: var(--primary-color);
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.version {
-  font-size: 0.9rem;
-  color: var(--text-light);
-  font-weight: normal;
 }
 
 .nav-links {
