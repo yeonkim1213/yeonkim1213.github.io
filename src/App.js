@@ -1,16 +1,34 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import AppV1 from './v1/App';
-import AppV2 from './v2/App';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+import Navigation from './components/Navigation';
+import Header from './components/Header';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Publications from './components/Publications';
+import Contact from './components/Contact';
 
 function App() {
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <Router>
-      <Routes>
-        <Route path="/v1" element={<AppV1 />} />
-        <Route path="/v2" element={<AppV2 />} />
-        <Route path="/" element={<Navigate to="/v2" replace />} />
-      </Routes>
+      <div className="container">
+        <Navigation onScroll={scrollTo} />
+        <Header />
+        <Experience />
+        <Projects />
+        <Publications />
+        <Contact />
+        <footer className="footer">
+          <p>© 2024 Jay Kim. All rights reserved.</p>
+        </footer>
+      </div>
     </Router>
   );
 }

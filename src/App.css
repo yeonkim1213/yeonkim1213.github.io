@@ -485,6 +485,94 @@ body {
   height: 24px;
 }
 
+/* Contact Section */
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.contact-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: white;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-content button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-content button:hover {
+  background-color: #1d4ed8;
+}
+
+.contact-content button:disabled {
+  background-color: var(--border-color);
+  cursor: not-allowed;
+}
+
+.success-message {
+  color: #28a745;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.error-message {
+  color: #dc3545;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--text-light);
+  border-top: 1px solid var(--border-color);
+  margin-top: 4rem;
+}
+
 @media (max-width: 768px) {
   .profile {
     grid-template-columns: 1fr;
@@ -493,11 +581,18 @@ body {
   }
 
   .nav-inner {
-    padding: 0.75rem;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .nav-links {
-    gap: 0.75rem;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links button {
+    width: 100%;
+    text-align: center;
   }
 
   .profile-img {
@@ -550,12 +645,4 @@ body {
   .desc {
     font-size: 1rem;
   }
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 2rem 0;
-  color: var(--text-light);
-  border-top: 1px solid var(--border-color);
 } 
