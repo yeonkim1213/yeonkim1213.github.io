@@ -1,5 +1,12 @@
 export const projects = [
     {
+      title: "ReVISit",
+      description: "A web-based platform for creating, publishing, and sharing interactive data visualization studies.",
+      tags: ["JavaScript", "TypeScript", "HTML", "CSS"],
+      github: "https://github.com/revisit-studies",
+      demo: "https://revisit.dev/"
+    },
+    {
       title: "Pantry Helper",
       description: "A real-time inventory monitoring, donation analytics, and automated notification systems for the University of Utah pantry.",
       tags: ["React", "Node.js", "MySQL", "AWS"],
@@ -10,7 +17,7 @@ export const projects = [
         title: "DOMO Layton Hackathon",
         description: "Awarded 1st Place in the Undergraduate Team category, accompanied by a $1,000 prize, recognizing exceptional performance.",
         tags: ["Python", "DOMO"],
-        github: "https://github.com",
+        github: "https://github.com/yeonkim1213",
         demo: "https://youtu.be/-6atF_ofxTg"
       },
     {
