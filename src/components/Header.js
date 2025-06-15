@@ -5,7 +5,7 @@ import profileImage from './img/jaykim.png';
 
 const Header = () => {
   return (
-    <header className="header">
+    <header id="about" className="header">
       <div className="profile">
         <div className="left">
           <img 
