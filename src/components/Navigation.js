@@ -20,6 +20,11 @@ const Navigation = ({ onScroll }) => {
               {item.name}
             </button>
           ))}
+          <div className="version-dropdown">
+            <select defaultValue="v1.0">
+              <option value="v1.0">v1.0</option>
+            </select>
+          </div>
         </div>
       </div>
     </nav>

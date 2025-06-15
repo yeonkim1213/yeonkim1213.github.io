@@ -50,6 +50,7 @@ body {
 .nav-links {
   display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
 .nav-links button {
@@ -63,6 +64,41 @@ body {
 
 .nav-links button:hover {
   color: var(--primary-color);
+}
+
+.version-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.version-dropdown select {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  appearance: none;
+  padding-right: 2rem;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1rem;
+  font-family: inherit;
+}
+
+.version-dropdown select:hover {
+  color: var(--primary-color);
+}
+
+.version-dropdown select:focus {
+  outline: none;
+}
+
+.version-dropdown select option {
+  background: white;
+  color: var(--text-color);
+  padding: 0.5rem;
 }
 
 /* Header */
