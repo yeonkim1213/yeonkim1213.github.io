@@ -1,14 +1,17 @@
 export const skills = {
   frontend: [
-    "JavaScript", "TypeScript", "React", "Next.js", "HTML", "CSS"
+    "React", "JavaScript", "TypeScript",  "Next.js", "HTML", "CSS", "Bootstrap", "React Native"
   ],
   backend: [
-    "Java", "Python",  "Node.js", "Express.js", "Django", "Spring Boot"
+    "Node.js", "Express.js", "Django", "Python", "Java", "Fast API"
   ],
   database: [
-    "MySQL", "SQL", "MongoDB", "PostgreSQL"
+    "MySQL", "SQL", "MariaDB"
+  ],
+  cloud: [
+    "AWS", "Firebase"
   ],
   tools: [
-    "Git", "AWS", "Docker", "Kubernetes", "Jenkins"
+     "VSCode", "Git", "npm", "yarn", "Postman", "Figma", "Slack", "Notion"
   ]
 }; 
