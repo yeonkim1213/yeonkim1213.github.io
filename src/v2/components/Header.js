@@ -31,9 +31,6 @@ import { ReactComponent as SlackIcon } from '../data/skills/slack.svg';
 import { ReactComponent as NotionIcon } from '../data/skills/notion.svg';
 import { ReactComponent as NodejsIcon } from '../data/skills/nodejs.svg';
 
-import bootstrapSvg from '../data/skills/bootstrap.svg';
-import mariadbSvg from '../data/skills/mariadb.svg';
-
 const iconMap = {
   'React': ReactIcon,
   'JavaScript': JavascriptIcon,
