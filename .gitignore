@@ -37,3 +37,6 @@ yarn-error.log*
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# EmailJS config
+src/v2/config/email.js
