@@ -1,27 +1,33 @@
 import React from 'react';
-import { Github, ExternalLink, Code2, FolderGit2 } from 'lucide-react';
+import { Github, ExternalLink, Code } from 'lucide-react';
 import { projects } from '../data/projects';
 
 const Projects = () => {
   return (
     <section id="projects" className="projects">
-      <h2><FolderGit2 className="icon" /> Projects</h2>
+      <h2><Code className="icon" /> Projects</h2>
       <div className="grid">
-        {projects.map((proj, i) => (
-          <div key={i} className="card">
+        {projects.map((project, index) => (
+          <div key={index} className="card">
             <div className="card-body">
-              <h3>{proj.title}</h3>
-              <p>{proj.description}</p>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
               <div className="tags">
-                {proj.tags.map((tag, j) => <span key={j}>{tag}</span>)}
+                {project.tags.map((tag, i) => (
+                  <span key={i} className="tag">{tag}</span>
+                ))}
               </div>
               <div className="links">
-                <a href={proj.github} target="_blank" rel="noopener noreferrer">
-                  <Github className="icon" /> Code
-                </a>
-                <a href={proj.demo} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="icon" /> Demo
-                </a>
+                {project.github && (
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <Github className="icon" /> Code
+                  </a>
+                )}
+                {project.demo && (
+                  <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="icon" /> Demo
+                  </a>
+                )}
               </div>
             </div>
           </div>

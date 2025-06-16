@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { emailConfig, sendEmail } from '../config/email';
+import { sendEmail } from '../config/email';
 import { Mail } from 'lucide-react';
 
 const Contact = () => {
