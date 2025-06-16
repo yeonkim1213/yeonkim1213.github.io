@@ -12,7 +12,14 @@ function App() {
   const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+      const navHeight = document.querySelector('.nav').offsetHeight;
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -25,9 +32,6 @@ function App() {
         <Projects />
         <Publications />
         <Contact />
-        <footer className="footer">
-          <p>© 2024 Jay Kim. All rights reserved.</p>
-        </footer>
       </div>
     </Router>
   );

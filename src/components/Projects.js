@@ -1,11 +1,11 @@
 import React from 'react';
-import { Github, ExternalLink, Code2 } from 'lucide-react';
+import { Github, ExternalLink, Code2, FolderGit2 } from 'lucide-react';
 import { projects } from '../data/projects';
 
 const Projects = () => {
   return (
     <section id="projects" className="projects">
-      <h2>Projects</h2>
+      <h2><FolderGit2 className="icon" /> Projects</h2>
       <div className="grid">
         {projects.map((proj, i) => (
           <div key={i} className="card">

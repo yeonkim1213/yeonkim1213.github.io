@@ -1,6 +1,6 @@
 import React from 'react';
 import { publications } from '../data/publications';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, BookOpen } from 'lucide-react';
 
 const Publications = () => {
   const highlightAuthor = (authors) => {
@@ -25,30 +25,28 @@ const Publications = () => {
   };
 
   return (
-    <section className="publications" id="publications">
-      <div className="container">
-        <h2>Publications</h2>
-        <div className="pub-list">
-          {publications.map((section, index) => (
-            <div key={index}>
-              <h3>{section.type}</h3>
+    <section id="publications" className="publications">
+      <h2><BookOpen className="icon" /> Publications</h2>
+      <div className="publications-container">
+        {publications.map((section, index) => (
+          <div key={index} className="publication-section">
+            <h3>{section.type}</h3>
+            <div className="publications-grid">
               {section.papers.map((paper, paperIndex) => (
-                <div key={paperIndex} className="pub-item">
+                <div key={paperIndex} className="publication-card">
                   <h4>{paper.title}</h4>
-                  <p className="venue">{paper.venue}</p>
                   <p className="authors">{highlightAuthor(paper.authors)}</p>
-                  <p className="date">{paper.date}</p>
-                  <div className="pub-links">
-                    <a href={paper.link} target="_blank" rel="noopener noreferrer" className="doi-link">
-                      DOI: {paper.doi}
-                      <ExternalLink size={16} />
+                  <p className="venue">{paper.venue}</p>
+                  <div className="links">
+                    <a href={paper.link} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="icon" /> Paper
                     </a>
                   </div>
                 </div>
               ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
