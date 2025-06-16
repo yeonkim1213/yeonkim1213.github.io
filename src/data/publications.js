@@ -8,7 +8,8 @@ export const publications = [
         title: "Understanding the Training Experiences of Competitive Skiers with Tetraplegia",
         doi: "10.1145/3706598.3713627",
         link: "https://doi.org/10.1145/3706598.3713627",
-        date: "2025-04-26"
+        date: "2025-04-26",
+        award: "Best paper Honorable Mention Award"
       },
       {
         venue: "ASSETS'24",

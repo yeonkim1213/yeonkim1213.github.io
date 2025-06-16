@@ -288,30 +288,31 @@ button {
 
 /* === EXPERIENCE SECTION === */
 .experience {
-  padding: 4rem 2rem;
+  min-height: 100vh;
+  padding: 6rem 0;
   background: linear-gradient(135deg, #ffffff 0%, #d2deeb 100%);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .experience h2 {
-  font-size: 32px;
-  margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
   color: var(--color-primary);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 }
 
-.experience h2 .icon {
-  width: 32px;
-  height: 32px;
-}
-
 .timeline {
-  max-width: 1000px;
+  flex: 1;
+  max-width: 800px;
   margin: 0 auto;
+  padding: 0 2rem;
   position: relative;
-  padding: 2rem 0;
 }
 
 .timeline::before {
@@ -367,10 +368,33 @@ button {
 }
 
 .timeline-item .place {
-  font-size: 1rem;
-  color: var(--color-text);
-  margin-bottom: 0.25rem;
-  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item .place a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.timeline-item .place a:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+.timeline-item .place .visit-icon {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s ease;
+}
+
+.timeline-item .place a:hover .visit-icon {
+  transform: translate(2px, -2px);
 }
 
 .timeline-item .duration {
@@ -780,8 +804,15 @@ button {
 .publication-card .venue {
   font-size: 0.875rem;
   color: var(--color-text-light);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: 500;
+}
+
+.publication-card .award {
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .publication-card .links {

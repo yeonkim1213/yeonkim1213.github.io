@@ -37,6 +37,9 @@ const Publications = () => {
                   <h4>{paper.title}</h4>
                   <p className="authors">{highlightAuthor(paper.authors)}</p>
                   <p className="venue">{paper.venue}</p>
+                  {paper.award && (
+                    <p className="award">🏆 {paper.award}</p>
+                  )}
                   <div className="links">
                     <a href={paper.link} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="icon" /> Paper
